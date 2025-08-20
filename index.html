@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <title>Personal Portfolio | Simangaliso Buthelezi</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <h1>Portifolio</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="#">Home</a></li>
+            <li id="link1" class="link"><a href="bio.html">About Me</a></li>
+            <li id="link2" class="link"><a href="#">Projects</a></li>
+            <li id="link2" class="link"><a href="#skills">Skills</a></li>
+            <li id="link3" class="link"><a href="#">Contact Info</a></li>
+        </ul>
+        <button class="btn" onclick="openModal()">Contact Me</button>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <H1>Hi, I'm <span>Simangaliso</span>, Computer Science Graduate</H1>
+            <p>
+                Versatile and ambitious Computer Science Graduate with a strong foundation in software development, data
+                analytics, and model training/fine-tuning. Proficient in Python, SQL, and JavaScript with hands-on experience in developing 
+                web applications, intergrating application with AI models and predictive modelling. Adept at leveraging analytical skills and
+                technical expertise to deliver innovative and data-driven solutions. Collaborative leader with a passion for technology, 
+                problem-solving, and driving quality in software and data systems.
+            </p>
+            <p>--------------------------------------------------------------</p>
+        </div>
+        <div class="image">
+            <img src="images/Anam2.jpg">
+        </div>
+    </header>
+
+    <div id="contactModal" class="fixed inset-0 bg-black/60 hidden flex justify-center items-center z-50">
+        <div class="bg-white text-black w-96 p-6 rounded-lg shadow-xl relative">
+        <h2 class="text-2xl font-bold mb-4">Request my CV</h2>
+
+        <form id="contactForm" class="flex flex-col gap-4">
+            <input type="text" placeholder="Your Name" class="p-2 border rounded" required>
+            <input type="email" placeholder="Your Email" class="p-2 border rounded" required>
+            <textarea placeholder="Message" rows="4" class="p-2 border rounded" required></textarea>
+            
+            <div class="flex justify-between">
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Request</button>
+            <button type="button" onclick="closeModal()" class="bg-gray-400 text-black px-4 py-2 rounded hover:bg-gray-500">Cancel</button>
+            </div>
+        </form>
+
+        </div>
+    </div>
+
+
+    <section class="container">
+        <h2 class="header">ABOUT ME</h2>
+        <div class="features">
+            <div class="card">
+                <span><i class="ri-user-line"></i></span>
+                <h4>About</h4>
+                <p>
+                    Find out more about me, my interests and passions.
+                </p>
+                <a href="bio.html">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-shirt-fill"></i></span>
+                <h4>Experience</h4>
+                <p>
+                    This is where you'll find all of my previous working experience.
+                </p>
+                <a href="#">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-graduation-cap-fill"></i></span>
+                <h4>Education</h4>
+                <p>
+                    Find out more about my Educational/Academic pursuits.
+                </p>
+                <a href="education.html">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-book-open-fill"></i></span>
+                <h4>Licenses & Certificates</h4>
+                <p>
+                    All of the Licenses & Certifications that I have acquired.
+                </p>
+                <a href="certificates.html">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">PROJECTS</h2>
+        <p class="sub-header">
+            These are part of the projects that I have done so far, from WebApps, Machine Learning Models
+            to Deep Learning Models.
+        </p>
+        <div class="pricing">
+            <div class="card">
+                <div class="content">
+                    <h4>Software Engineering</h4>
+                    <h3>Software Engineering Projects</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <b>AI Chatbot:</b> Developed a full stack web application that allows users to prompt and
+                        and receive fast responses. This project was implemented using HTML, CSS, Bootstrap, JavaScript,
+                        and Node.js. utilizing Firebase for authentication and database management. Interacted OpenAI API
+                        and Websocket.
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <b>University Application System with ML:</b> Developed a web platform to streamline university admissions
+                        for matric students, featuring a machine learning model to predict final marks based on previous academic
+                        performance. This project was implemented using HTML, CSS, Bootstrap, JavaScript, Python (Flask), Scikit-learn,
+                        and MySQL.
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='https://github.com/ministercmanga/Application-system'">View Project</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h4>Artificial Intelligence</h4>
+                    <h3>Data Science Projects</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <b>ML for Predicting COVID-19:</b> Utilizing a .CSV datasets consist of pateints information to train various machine
+                        learning models includes Random forest, Decision Tree, and Logistic Regression to predict COVID-19 status. Data loading,
+                        pre-processing, and feature selection was performed using Python before training the models.
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <b>Image Classfication:</b> Utilizing CRX images to train a ResNet50 model to classify between four types of images 
+                        (COVID-19, Normal, Pneumonia, Tuberculosis). The dataset was obtained from Kaggle, devided into training, testing sets,
+                        and validation sets. The model was trained using Python and the ResNet50 model from Keras.  
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='https://github.com/ministercmanga/ML-for-COVID-19'">View Project</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-12 px-6">
+        <div class="text-center mb-10">
+        <h1 class="text-3xl font-bold text-white">My Skills</h1>
+        <p class="text-lg text-gray-300 mt-2">This is a list of my Technical Skills</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-html5-fill text-orange-500 text-5xl"></i>
+            <p class="text-gray-300 mt-2">HTML5</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-css3-fill text-blue-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Tailwind CSS</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="bi bi-filetype-css text-blue-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Bootstrap CSS</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-javascript-fill text-yellow-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">JavaScript</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-database-2-fill text-green-500 text-5xl"></i>
+            <p class="text-gray-300 mt-2">MySQL</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="bi bi-filetype-py text-yellow-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Python</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="bi bi-filetype-java text-orange-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Java</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="bi bi-filetype-cs text-purple-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">C#</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="bi bi-server text-green-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Node.js</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-paint-fill text-pink-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">Figma</p>
+        </div>
+
+        <div class="bg-[#27272a] w-40 h-40 p-6 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <i class="ri-github-fill text-gray-400 text-5xl"></i>
+            <p class="text-gray-300 mt-2">GitHub</p>
+        </div>
+
+        <div class="bg-[#27272a] p-6 w-40 h-40 rounded-xl flex flex-col items-center shadow-md hover:scale-105 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 351" class="w-12 h-12">
+                <g>
+                    <polygon fill="#FFA000" points="0,263 128,0 256,263 128,351"/>
+                    <polygon fill="#F57C00" points="0,263 128,351 128,0"/>
+                    <polygon fill="#FFCA28" points="128,43 128,351 256,263"/>
+                </g>
+            </svg>
+            <p class="text-gray-300 mt-2">Firebase</p>
+        </div>
+        </div>
+  </section>
+
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <p>
+                Feel free to contact me and connect with me on my social media platforms!<br>
+                <i class="ri-phone-fill"></i>: +2761731284 <br>
+                <i class="ri-mail-fill"></i>: simangalisob70@gmail.com
+            </p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/simangaliso-buthelezi-68a21628a/"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://www.instagram.com/ngqengelele_01/"><i class="ri-instagram-line"></i></a>
+                <a href="https://x.com/MinisterCm23614/"><i class="ri-twitter-line"></i></a>
+                <a href="https://www.tiktok.com/@shenge11047/"><i class="ri-tiktok-line"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
